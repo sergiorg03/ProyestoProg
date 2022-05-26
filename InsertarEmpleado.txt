@@ -63,4 +63,241 @@ Nombre: Malolo
 Apellidos: Vazquez
 Edad: 31
 Dirección: Torneo
-Departamento: 498
+Departamento: 498Empleados:
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210
+Empleados:
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210
+Empleados:
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110
+Empleados:
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340
+Empleados:
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340
+Empleados:
+Codigo empleado: 7
+Nombre: Jose Luis
+Apellidos: Romero Martinez
+Edad: 30
+Dirección: Macarena
+Departamento: 974
+Empleados:
+Codigo empleado: 154
+Nombre: Pepe
+Apellidos: Rodríguez Lara
+Edad: 23
+Dirección: Miguel Cid
+Departamento: 210
+Empleados:
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210
+Empleados:
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210
+Empleados:
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110
+Empleados:
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340
+Empleados:
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340
+Empleados:
+Codigo empleado: 7
+Nombre: Jose Luis
+Apellidos: Romero Martinez
+Edad: 30
+Dirección: Macarena
+Departamento: 974
+Empleados:
+Codigo empleado: 10
+Nombre: Samuel
+Apellidos: Martinez Martin
+Edad: 53
+Dirección: Alameda
+Departamento: 450
+Empleados:
+Codigo empleado: 154
+Nombre: Pepe
+Apellidos: Rodríguez Lara
+Edad: 23
+Dirección: Miguel Cid
+Departamento: 210
+Empleados:
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210
+Empleados:
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210
+Empleados:
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110
+Empleados:
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340
+Empleados:
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340
+Empleados:
+Codigo empleado: 7
+Nombre: Jose Luis
+Apellidos: Romero Martinez
+Edad: 30
+Dirección: Macarena
+Departamento: 974
+Empleados:
+Codigo empleado: 8
+Nombre: sdfsdf
+Apellidos: sdfsdf
+Edad: 1
+Dirección: sdfsdfsdf
+Departamento: 231
+Empleados:
+Codigo empleado: 10
+Nombre: Samuel
+Apellidos: Martinez Martin
+Edad: 53
+Dirección: Alameda
+Departamento: 450
+Empleados:
+Codigo empleado: 154
+Nombre: Pepe
+Apellidos: Rodríguez Lara
+Edad: 23
+Dirección: Miguel Cid
+Departamento: 210
+Empleados:
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210
+Empleados:
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210
+Empleados:
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110
+Empleados:
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340
+Empleados:
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340
+Empleados:
+Codigo empleado: 7
+Nombre: Jose Luis
+Apellidos: Romero Martinez
+Edad: 30
+Dirección: Macarena
+Departamento: 974
+Empleados:
+Codigo empleado: 8
+Nombre: sdfsdf
+Apellidos: sdfsdf
+Edad: 1
+Dirección: sdfsdfsdf
+Departamento: 231
+Empleados:
+Codigo empleado: 9
+Nombre: Maloli
+Apellidos: jsdisd
+Edad: 32
+Dirección: bsdbasdfb
+Departamento: 210
+Empleados:
+Codigo empleado: 10
+Nombre: Samuel
+Apellidos: Martinez Martin
+Edad: 53
+Dirección: Alameda
+Departamento: 450
+Empleados:
+Codigo empleado: 154
+Nombre: Pepe
+Apellidos: Rodríguez Lara
+Edad: 23
+Dirección: Miguel Cid
+Departamento: 210

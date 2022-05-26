@@ -1,6 +1,7 @@
 package com.mycompany.proyesto;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -458,6 +459,8 @@ public class concesionario_modificar extends javax.swing.JFrame {
             pstmtSelect.close();
             conexion.close();
 
+        }catch(IOException io){
+            io.getMessage();
         } catch (Exception e) {
             e.printStackTrace();
         }

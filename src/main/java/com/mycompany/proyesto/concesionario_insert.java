@@ -8,7 +8,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -332,9 +337,9 @@ public class concesionario_insert extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         concesionario_modificar modif = new concesionario_modificar();
-        
+
         JOptionPane.showMessageDialog(jPanel1, "Para modificar un empleado debes introducir todos los datos de nuevo. ");
-        
+
         modif.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -378,6 +383,7 @@ public class concesionario_insert extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         AltaEmple();
         JOptionPane.showMessageDialog(jPanel1, "Empleado insertado correctamente. ");
+        //SeleccionarEmpleadosDeDepart();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -420,6 +426,7 @@ public class concesionario_insert extends javax.swing.JFrame {
         });
     }
 
+    //Dar de alta un nuevo empleado
     public void AltaEmple() {
 
         String codigo_empleado = jTextField1.getText();
@@ -458,15 +465,15 @@ public class concesionario_insert extends javax.swing.JFrame {
             pstmt.setInt(4, edadEmple);
             pstmt.setString(5, direcEmpleados);
             pstmt.setInt(6, departamento);
-            
+
             int rowsInserted = pstmt.executeUpdate();
 
             PreparedStatement pstmtSelect = conexion.prepareStatement("SELECT * FROM empleadosintento;");
-            
+
             System.out.println("Número de lineas afectadas: " + rowsInserted);
 
             ResultSet resultado = pstmtSelect.executeQuery();
-
+            
             FileWriter fw = new FileWriter("InsertarEmpleado.txt", true);
 
             while (resultado.next()) {
@@ -479,7 +486,7 @@ public class concesionario_insert extends javax.swing.JFrame {
                 String dir = resultado.getString(5);
                 int dept = resultado.getInt(6);
 
-                fw.write("Empleados:\nCodigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir + "\nDepartamento: " + dept+ "\n");
+                fw.write("Empleados:\nCodigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir + "\nDepartamento: " + dept + "\n");
 
             }
 
@@ -487,6 +494,77 @@ public class concesionario_insert extends javax.swing.JFrame {
             resultado.close();
             pstmt.close();
             pstmtSelect.close();
+            conexion.close();
+
+        }catch(IOException io){
+            io.getMessage();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Seleccionar los empleados de un mismo departamento
+    public void SeleccionarEmpleadosDeDepart() {
+
+        ArrayList info = new ArrayList();
+        Map<Integer, ArrayList> EmplexDepart = new TreeMap<Integer, ArrayList>();
+        String[] vec = new String[EmplexDepart.size()];
+
+        try {
+
+            String cadcon = "jdbc:mysql://localhost/conce?serverTimezone=UTC";
+            String user = "root";
+            String password = "";
+
+            Connection conexion = DriverManager.getConnection(cadcon, user, password);
+
+            Statement sentencia = conexion.createStatement();
+
+            ResultSet resultado = sentencia.executeQuery("Select IdEmpleado, Nombre, Apellidos, Edad, Direccion, Departamento from empleadosintento GROUP BY departamento ASC;");
+
+            while (resultado.next()) {
+
+                int cod = resultado.getInt(6);
+                //Seleccionamos los datos de los empleados de ese departamento
+                int cosigo = resultado.getInt(1);
+                String nom = resultado.getString(2);
+                String ape = resultado.getString(3);
+                int ed = resultado.getInt(4);
+                String dir = resultado.getString(5);
+                String cosigoStr = String.valueOf(cosigo);
+                String edStr = String.valueOf(ed);
+                
+                
+
+                /*
+                for (int j = 0; j <  ; j++) { //añadimos los valores obtenidos de la BBDD al vector (Todos los valores parseados)
+
+                    int cosigo = resultado.getInt(1);
+                    String nom = resultado.getString(2);
+                    String ape = resultado.getString(3);
+                    int ed = resultado.getInt(4);
+                    String dir = resultado.getString(5);
+                    String cosigoStr = String.valueOf(cosigo);
+                    String edStr = String.valueOf(ed);
+
+                    vec[0] = cosigoStr;
+                    vec[1] = nom;
+                    vec[2] = ape;
+                    vec[3] = edStr;
+                    vec[4] = dir;
+                    
+                    for (int k = 0; k < vec.length; k++) { //Añadimos al array todos los valores del vector
+
+                        info.add(vec[k]);
+                    }
+                }
+                 */
+                EmplexDepart.put(cod, info);
+
+            }
+
+            resultado.close();
+            sentencia.close();
             conexion.close();
 
         } catch (Exception e) {
