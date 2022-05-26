@@ -1,0 +1,8 @@
+Empleado Buscado:
+
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210

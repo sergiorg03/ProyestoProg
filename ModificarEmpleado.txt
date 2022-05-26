@@ -1,0 +1,8 @@
+Nuevo Empleado
+
+Codigo empleado: 7
+Nombre: Jose Luis
+Apellidos: Romero Martinez
+Edad: 30
+Dirección: Macarena
+Departamento: 974

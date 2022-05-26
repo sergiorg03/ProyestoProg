@@ -1,0 +1,202 @@
+Empleado Borrado
+
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110Empleado Borrado
+
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340Empleado Borrado
+
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340Empleado Borrado
+
+Codigo empleado: 7
+Nombre: Malolo
+Apellidos: Vazquez
+Edad: 31
+Dirección: Torneo
+Departamento: 498Empleado Borrado
+
+Codigo empleado: 8
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 9
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 2
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110Empleado Borrado
+
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340Empleado Borrado
+
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340Empleado Borrado
+
+Codigo empleado: 7
+Nombre: Malolo
+Apellidos: Vazquez
+Edad: 31
+Dirección: Torneo
+Departamento: 498Empleado Borrado
+
+Codigo empleado: 8
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 2
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210Empleado Borrado
+
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110Empleado Borrado
+
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340Empleado Borrado
+
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340Empleado Borrado
+
+Codigo empleado: 7
+Nombre: Malolo
+Apellidos: Vazquez
+Edad: 31
+Dirección: Torneo
+Departamento: 498Empleado Borrado
+
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210
+Empleado Borrado
+
+Codigo empleado: 3
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210
+Empleado Borrado
+
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Torneo 
+Departamento: 110
+Empleado Borrado
+
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340
+Empleado Borrado
+
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340
+Empleado Borrado
+
+Codigo empleado: 7
+Nombre: Jose Luis
+Apellidos: Romero Martinez
+Edad: 30
+Dirección: Macarena
+Departamento: 974

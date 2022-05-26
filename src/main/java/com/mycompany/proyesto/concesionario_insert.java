@@ -110,7 +110,7 @@ public class concesionario_insert extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap(19, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
@@ -134,7 +134,7 @@ public class concesionario_insert extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addGap(41, 41, 41))
         );
@@ -332,7 +332,9 @@ public class concesionario_insert extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         concesionario_modificar modif = new concesionario_modificar();
-
+        
+        JOptionPane.showMessageDialog(jPanel1, "Para modificar un empleado debes introducir todos los datos de nuevo. ");
+        
         modif.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -477,7 +479,7 @@ public class concesionario_insert extends javax.swing.JFrame {
                 String dir = resultado.getString(5);
                 int dept = resultado.getInt(6);
 
-                fw.write("Codigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir + "\nDepartamento: " + dept);
+                fw.write("Empleados:\nCodigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir + "\nDepartamento: " + dept+ "\n");
 
             }
 
