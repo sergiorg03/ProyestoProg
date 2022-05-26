@@ -386,7 +386,7 @@ public class concesionario_insert extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        
+
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     public static void main(String args[]) {
@@ -420,8 +420,6 @@ public class concesionario_insert extends javax.swing.JFrame {
 
     public void AltaEmple() {
 
-        Scanner leer = new Scanner(System.in);
-
         String codigo_empleado = jTextField1.getText();
 
         int codiguito;
@@ -437,59 +435,60 @@ public class concesionario_insert extends javax.swing.JFrame {
 
         int edadEmple;
         edadEmple = Integer.parseInt(edad1);
-        
+
         String depart = jTextField5.getText();
         int departamento = 0;
         departamento = Integer.parseInt(depart);
 
-        if ((nombreEmpleado.length() == 15 || nombreEmpleado.length() < 15) || (Apellidos_empleados.length() == 25 || Apellidos_empleados.length() < 25) || (direcEmpleados.length() == 20 || direcEmpleados.length() < 20)) {
+        try {
 
-            try {
+            String cadcon = "jdbc:mysql://localhost/conce?serverTimezone=UTC";
+            String user = "root";
+            String password = "";
 
-                String cadcon = "jdbc:mysql://localhost/conce?serverTimezone=UTC";
-                String user = "root";
-                String password = "";
+            Connection conexion = DriverManager.getConnection(cadcon, user, password);
 
-                Connection conexion = DriverManager.getConnection(cadcon, user, password);
+            PreparedStatement pstmt = conexion.prepareStatement("Insert INTO empleadosintento VALUES(?,?,?,?,?,?);");
 
-                PreparedStatement pstmt = conexion.prepareStatement("Insert into empleadosintento values(?,?,?,?,?,?);");
+            pstmt.setInt(1, codiguito);
+            pstmt.setString(2, nombreEmpleado);
+            pstmt.setString(3, Apellidos_empleados);
+            pstmt.setInt(4, edadEmple);
+            pstmt.setString(5, direcEmpleados);
+            pstmt.setInt(6, departamento);
+            
+            int rowsInserted = pstmt.executeUpdate();
 
-                pstmt.setInt(1, codiguito);
-                pstmt.setString(2, nombreEmpleado);
-                pstmt.setString(3, Apellidos_empleados);
-                pstmt.setInt(4, edadEmple);
-                pstmt.setString(5, direcEmpleados);
-                pstmt.setString(6, depart);
+            PreparedStatement pstmtSelect = conexion.prepareStatement("SELECT * FROM empleadosintento;");
+            
+            System.out.println("Número de lineas afectadas: " + rowsInserted);
 
-                PreparedStatement pstmtSelect = conexion.prepareStatement("SELECT * FROM empleadosintento;");
+            ResultSet resultado = pstmtSelect.executeQuery();
 
-                ResultSet resultado = pstmtSelect.executeQuery();
+            FileWriter fw = new FileWriter("InsertarEmpleado.txt", true);
 
-                FileWriter fw = new FileWriter("InsertarEmpleado.txt", true);
+            while (resultado.next()) {
 
-                while (resultado.next()) {
+                //Mapeo
+                int cosigo = resultado.getInt(1);
+                String nom = resultado.getString(2);
+                String ape = resultado.getString(3);
+                int ed = resultado.getInt(4);
+                String dir = resultado.getString(5);
+                int dept = resultado.getInt(6);
 
-                    //Mapeo
-                    int cosigo = resultado.getInt(1);
-                    String nom = resultado.getString(2);
-                    String ape = resultado.getString(3);
-                    int ed = resultado.getInt(4);
-                    String dir = resultado.getString(5);
-                    int dept = resultado.getInt(6);
+                fw.write("Codigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir + "\nDepartamento: " + dept);
 
-                    fw.write("Codigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir +"\nDepartamento: "+ dept);
-
-                }
-
-                fw.close();
-                resultado.close();
-                pstmt.close();
-                pstmtSelect.close();
-                conexion.close();
-
-            } catch (Exception e) {
-                e.printStackTrace();
             }
+
+            fw.close();
+            resultado.close();
+            pstmt.close();
+            pstmtSelect.close();
+            conexion.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
