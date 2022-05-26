@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,19 +19,8 @@ import java.util.logging.Logger;
  */
 public class concesionario_insert extends javax.swing.JFrame {
 
-    int codEmple;
-    String nombre;
-    String apellidos;
-    String direccion;
-    int Edad;
-
     public concesionario_insert() {
         initComponents();
-        this.codEmple = 0;
-        this.nombre = "";
-        this.apellidos = "";
-        this.direccion = "";
-        this.Edad = 1;
     }
 
     @SuppressWarnings("unchecked")
@@ -58,6 +48,8 @@ public class concesionario_insert extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton6 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -190,6 +182,7 @@ public class concesionario_insert extends javax.swing.JFrame {
 
         jLabel7.setText("Edad: ");
 
+        jComboBox1.setEditable(true);
         jComboBox1.setMaximumRowCount(10);
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "" }));
         jComboBox1.setToolTipText("");
@@ -208,6 +201,15 @@ public class concesionario_insert extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setText("Departamento:");
+
+        jTextField5.setName("TextDireccion"); // NOI18N
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -220,13 +222,15 @@ public class concesionario_insert extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel7))
-                        .addGap(82, 82, 82)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
+                        .addGap(59, 59, 59)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField4)
                             .addComponent(jTextField2)
                             .addComponent(jTextField3)
-                            .addComponent(jComboBox1, 0, 170, Short.MAX_VALUE)))
+                            .addComponent(jComboBox1, 0, 170, Short.MAX_VALUE)
+                            .addComponent(jTextField5)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(43, 43, 43)
@@ -261,6 +265,10 @@ public class concesionario_insert extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -366,11 +374,8 @@ public class concesionario_insert extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        try {
-            AltaEmple();
-        } catch (SQLException ex) {
-            Logger.getLogger(concesionario_insert.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        AltaEmple();
+        JOptionPane.showMessageDialog(jPanel1, "Empleado insertado correctamente. ");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -379,6 +384,10 @@ public class concesionario_insert extends javax.swing.JFrame {
         elim.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
     public static void main(String args[]) {
 
@@ -407,19 +416,16 @@ public class concesionario_insert extends javax.swing.JFrame {
                 new concesionario_insert().setVisible(true);
             }
         });
-
-        /*.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                
-            }
-        });*/
     }
 
-    public void AltaEmple() throws SQLException { //Error
+    public void AltaEmple() {
 
         Scanner leer = new Scanner(System.in);
 
-        int codigo_empleado = Integer.parseInt(jTextField1.getText());
+        String codigo_empleado = jTextField1.getText();
+
+        int codiguito;
+        codiguito = Integer.parseInt(codigo_empleado);
 
         String nombreEmpleado = jTextField2.getText();
 
@@ -427,66 +433,66 @@ public class concesionario_insert extends javax.swing.JFrame {
 
         String direcEmpleados = jTextField4.getText();
 
-        int edadEmple = jComboBox1.getSelectedIndex();
+        String edad1 = (String) jComboBox1.getSelectedItem();
 
-        String cadcon = "jdbc:mysql://localhost/concesionario1?serverTimezone=UTC";
-        String user = "root";
-        String password = "";
+        int edadEmple;
+        edadEmple = Integer.parseInt(edad1);
+        
+        String depart = jTextField5.getText();
+        int departamento = 0;
+        departamento = Integer.parseInt(depart);
 
-        Connection conexion = DriverManager.getConnection(cadcon, user, password);
+        if ((nombreEmpleado.length() == 15 || nombreEmpleado.length() < 15) || (Apellidos_empleados.length() == 25 || Apellidos_empleados.length() < 25) || (direcEmpleados.length() == 20 || direcEmpleados.length() < 20)) {
 
-        PreparedStatement SelectcodEm = conexion.prepareStatement("SELECT COUNT(*) FROM empleados1 WHERE IdEmpleado = (?);");
-        SelectcodEm.setInt(1, codigo_empleado);
+            try {
 
-        ResultSet resultadoCod = SelectcodEm.executeQuery();
+                String cadcon = "jdbc:mysql://localhost/conce?serverTimezone=UTC";
+                String user = "root";
+                String password = "";
 
-        if (resultadoCod.getInt(1) == 0) {
+                Connection conexion = DriverManager.getConnection(cadcon, user, password);
 
-            if (nombreEmpleado.length() == 15 || nombreEmpleado.length() < 15 || Apellidos_empleados.length() == 25 || Apellidos_empleados.length() < 25 || direcEmpleados.length() == 20 || direcEmpleados.length() < 20) {
+                PreparedStatement pstmt = conexion.prepareStatement("Insert into empleadosintento values(?,?,?,?,?,?);");
 
-                try {
+                pstmt.setInt(1, codiguito);
+                pstmt.setString(2, nombreEmpleado);
+                pstmt.setString(3, Apellidos_empleados);
+                pstmt.setInt(4, edadEmple);
+                pstmt.setString(5, direcEmpleados);
+                pstmt.setString(6, depart);
 
-                    PreparedStatement pstmt = conexion.prepareStatement("INSERT INTO empleados1 VALUES (?,?,?,?,?)");
+                PreparedStatement pstmtSelect = conexion.prepareStatement("SELECT * FROM empleadosintento;");
 
-                    pstmt.setInt(1, codigo_empleado);
-                    pstmt.setString(2, nombreEmpleado);
-                    pstmt.setString(3, Apellidos_empleados);
-                    pstmt.setString(5, direcEmpleados);
-                    pstmt.setInt(4, edadEmple);
+                ResultSet resultado = pstmtSelect.executeQuery();
 
-                    PreparedStatement pstmtSelect = conexion.prepareStatement("SELECT * FROM empleados1;");
+                FileWriter fw = new FileWriter("InsertarEmpleado.txt", true);
 
-                    ResultSet resultado = pstmtSelect.executeQuery();
+                while (resultado.next()) {
 
-                    FileWriter fw = new FileWriter("InsertarEmpleado.txt", true);
+                    //Mapeo
+                    int cosigo = resultado.getInt(1);
+                    String nom = resultado.getString(2);
+                    String ape = resultado.getString(3);
+                    int ed = resultado.getInt(4);
+                    String dir = resultado.getString(5);
+                    int dept = resultado.getInt(6);
 
-                    while (resultado.next()) {
+                    fw.write("Codigo empleado: " + cosigo + "\nNombre: " + nom + "\nApellidos: " + ape + "\nEdad: " + ed + "\nDirección: " + dir +"\nDepartamento: "+ dept);
 
-                        //Mapeo
-                        resultado.getInt(1);
-                        resultado.getString(2);
-                        resultado.getString(3);
-                        resultado.getString(5);
-                        resultado.getInt(4);
-
-                        fw.write("Codigo empleado: " + resultado.getInt(1) + "\nNombre: " + resultado.getString(2) + "\nApellidos: " + resultado.getString(3) + "\nDirección: " + resultado.getString(5) + "\nEdad: " + resultado.getInt(4));
-
-                    }
-
-                    fw.close();
-                    resultado.close();
-                    pstmt.close();
-                    pstmtSelect.close();
-                    conexion.close();
-
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
+
+                fw.close();
+                resultado.close();
+                pstmt.close();
+                pstmtSelect.close();
+                conexion.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } else {
-            
         }
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -502,7 +508,8 @@ public class concesionario_insert extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel8;
+    public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -510,6 +517,7 @@ public class concesionario_insert extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 
 }
