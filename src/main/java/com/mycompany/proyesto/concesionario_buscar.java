@@ -64,6 +64,7 @@ public class concesionario_buscar extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Modificar datos empleado");
         jButton2.setMaximumSize(new java.awt.Dimension(73, 73));
         jButton2.setMinimumSize(new java.awt.Dimension(73, 73));
@@ -74,6 +75,7 @@ public class concesionario_buscar extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Eliminar empleado");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

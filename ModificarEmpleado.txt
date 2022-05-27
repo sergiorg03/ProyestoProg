@@ -13,3 +13,35 @@ Apellidos: dfghdfghdfghf
 Edad: 19
 Dirección: jhhjhjhjjjj
 Departamento: 165
+Nuevo Empleado
+
+Codigo empleado: 45
+Nombre: Manuel
+Apellidos: Aguilar Mayor
+Edad: 23
+Dirección: Mendoza Rios
+Departamento: 340
+Nuevo Empleado
+
+Codigo empleado: 55
+Nombre: Manuel
+Apellidos: Vazquez Lara
+Edad: 38
+Dirección: Mendoza Rios
+Departamento: 340
+Nuevo Empleado
+
+Codigo empleado: 63
+Nombre: Manuel
+Apellidos: Lara Vazquez
+Edad: 24
+Dirección: Mendoza Rios
+Departamento: 210
+Nuevo Empleado
+
+Codigo empleado: 3
+Nombre: Pepe
+Apellidos: Jimenez del Pozo
+Edad: 28
+Dirección: Torneo
+Departamento: 210
