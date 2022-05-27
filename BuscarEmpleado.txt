@@ -6,3 +6,11 @@ Apellidos: Rodriguez Martinez
 Edad: 30
 Dirección: Torneo 
 Departamento: 210
+Empleado Buscado:
+
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340

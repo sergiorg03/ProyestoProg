@@ -200,3 +200,67 @@ Apellidos: Romero Martinez
 Edad: 30
 Dirección: Macarena
 Departamento: 974
+Empleado Borrado
+
+Codigo empleado: 1
+Nombre: Manuel 
+Apellidos: Rodriguez Martinez 
+Edad: 30
+Dirección: Torneo 
+Departamento: 210
+Empleado Borrado
+
+Codigo empleado: 2
+Nombre: Pepe 
+Apellidos: Vazquez Caro 
+Edad: 26
+Dirección: Francisco Carrion Me
+Departamento: 210
+Empleado Borrado
+
+Codigo empleado: 3
+Nombre: Juan 
+Apellidos: Guarnizo del Postigo 
+Edad: 41
+Dirección: Feria 
+Departamento: 110
+Empleado Borrado
+
+Codigo empleado: 4
+Nombre: Lucía 
+Apellidos: Martinez Lara 
+Edad: 27
+Dirección: Virgen de Lujan 
+Departamento: 110
+Empleado Borrado
+
+Codigo empleado: 5
+Nombre: Sergio 
+Apellidos: Rodríguez Geniz 
+Edad: 18
+Dirección: Redes 
+Departamento: 340
+Empleado Borrado
+
+Codigo empleado: 6
+Nombre: Laura 
+Apellidos: Dorado Barrero 
+Edad: 19
+Dirección: Caño Ronco 
+Departamento: 340
+Empleado Borrado
+
+Codigo empleado: 7
+Nombre: Martina 
+Apellidos: Fuentes el Pozo 
+Edad: 50
+Dirección: Virgen de los Buenos
+Departamento: 215
+Empleado Borrado
+
+Codigo empleado: 8
+Nombre: Maria 
+Apellidos: Lopez Fernandez 
+Edad: 33
+Dirección: Resolana 
+Departamento: 215

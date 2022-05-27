@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import static java.util.Map.entry;
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.logging.Level;
@@ -55,6 +56,7 @@ public class concesionario_insert extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -215,6 +217,13 @@ public class concesionario_insert extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setText("Añadir empleados a un mapa");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -241,7 +250,9 @@ public class concesionario_insert extends javax.swing.JFrame {
                         .addGap(43, 43, 43)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(37, 37, 37))
         );
         jPanel2Layout.setVerticalGroup(
@@ -262,14 +273,17 @@ public class concesionario_insert extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
                 .addGap(24, 24, 24)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -292,7 +306,7 @@ public class concesionario_insert extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -383,7 +397,6 @@ public class concesionario_insert extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         AltaEmple();
         JOptionPane.showMessageDialog(jPanel1, "Empleado insertado correctamente. ");
-        //SeleccionarEmpleadosDeDepart();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -396,6 +409,11 @@ public class concesionario_insert extends javax.swing.JFrame {
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
 
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        JOptionPane.showMessageDialog(jPanel1, "La salida del departamento con sus empleados se realizara por consola. ");
+        SeleccionarEmpleadosDeDepart();
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     public static void main(String args[]) {
 
@@ -473,7 +491,7 @@ public class concesionario_insert extends javax.swing.JFrame {
             System.out.println("Número de lineas afectadas: " + rowsInserted);
 
             ResultSet resultado = pstmtSelect.executeQuery();
-            
+
             FileWriter fw = new FileWriter("InsertarEmpleado.txt", true);
 
             while (resultado.next()) {
@@ -496,9 +514,9 @@ public class concesionario_insert extends javax.swing.JFrame {
             pstmtSelect.close();
             conexion.close();
 
-        }catch(IOException io){
+        } catch (IOException io) {
             io.getMessage();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -510,68 +528,44 @@ public class concesionario_insert extends javax.swing.JFrame {
         Map<Integer, ArrayList> EmplexDepart = new TreeMap<Integer, ArrayList>();
         String[] vec = new String[EmplexDepart.size()];
 
-        try {
+        String CodigoAGuardar = jTextField5.getText();
+        int CodigoAGuardarStr = Integer.parseInt(CodigoAGuardar);
 
+        try {
             String cadcon = "jdbc:mysql://localhost/conce?serverTimezone=UTC";
             String user = "root";
             String password = "";
 
             Connection conexion = DriverManager.getConnection(cadcon, user, password);
 
-            Statement sentencia = conexion.createStatement();
-
-            ResultSet resultado = sentencia.executeQuery("Select IdEmpleado, Nombre, Apellidos, Edad, Direccion, Departamento from empleadosintento GROUP BY departamento ASC;");
+            PreparedStatement pstmtSelect = conexion.prepareStatement("SELECT IdEmpleado, Nombre, Apellidos FROM empleadosintento WHERE Departamento = (?) ORDER BY Departamento ASC;");
+            pstmtSelect.setInt(1, CodigoAGuardarStr);
+            ResultSet resultado = pstmtSelect.executeQuery();
 
             while (resultado.next()) {
 
-                int cod = resultado.getInt(6);
-                //Seleccionamos los datos de los empleados de ese departamento
                 int cosigo = resultado.getInt(1);
+                String cosigoStr = String.valueOf(cosigo);
                 String nom = resultado.getString(2);
                 String ape = resultado.getString(3);
-                int ed = resultado.getInt(4);
-                String dir = resultado.getString(5);
-                String cosigoStr = String.valueOf(cosigo);
-                String edStr = String.valueOf(ed);
-                
-                
-
-                /*
-                for (int j = 0; j <  ; j++) { //añadimos los valores obtenidos de la BBDD al vector (Todos los valores parseados)
-
-                    int cosigo = resultado.getInt(1);
-                    String nom = resultado.getString(2);
-                    String ape = resultado.getString(3);
-                    int ed = resultado.getInt(4);
-                    String dir = resultado.getString(5);
-                    String cosigoStr = String.valueOf(cosigo);
-                    String edStr = String.valueOf(ed);
-
-                    vec[0] = cosigoStr;
-                    vec[1] = nom;
-                    vec[2] = ape;
-                    vec[3] = edStr;
-                    vec[4] = dir;
-                    
-                    for (int k = 0; k < vec.length; k++) { //Añadimos al array todos los valores del vector
-
-                        info.add(vec[k]);
-                    }
-                }
-                 */
-                EmplexDepart.put(cod, info);
+                info.add(cosigoStr);
+                info.add(nom);
+                info.add(ape);
 
             }
-
-            resultado.close();
-            sentencia.close();
-            conexion.close();
-
-        } catch (Exception e) {
+            EmplexDepart.put(CodigoAGuardarStr, info);
+            
+            System.out.println("Depart  Id  Nombre  Apellidos ");
+            System.out.println(EmplexDepart +"\n");
+            
+        }catch (IndexOutOfBoundsException in){
+            System.out.println("El indice Introducido es mayor al permitido. ");
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -579,6 +573,7 @@ public class concesionario_insert extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

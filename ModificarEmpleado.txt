@@ -5,4 +5,11 @@ Nombre: Jose Luis
 Apellidos: Romero Martinez
 Edad: 30
 Dirección: Macarena
-Departamento: 974
+Departamento: 974Nuevo Empleado
+
+Codigo empleado: 15
+Nombre: erghdfghdfg
+Apellidos: dfghdfghdfghf
+Edad: 19
+Dirección: jhhjhjhjjjj
+Departamento: 165
